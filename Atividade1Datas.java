@@ -1,6 +1,7 @@
 package entregargit;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
@@ -33,9 +34,15 @@ public class Atividade1Datas {
 		System.out.printf("Hoje é %d, dia %d do %d de %d e agora são %d horas e %d minutos", diaSemana, dia, mes, ano,
 				hora, minutos);
 	}
+
 	public static void DatasHoras2() {
 		DateFormat dataFull = DateFormat.getDateInstance(DateFormat.FULL);
+		SimpleDateFormat sdf2 = new SimpleDateFormat("dd/MM/y HH:mm:ss");
+		SimpleDateFormat hora = new SimpleDateFormat("HH");
+		SimpleDateFormat min = new SimpleDateFormat("m");
 		Date data1 = new Date();
-		System.out.println("Hoje é "+dataFull.format(data1));
+		System.out.println("Hoje é " + dataFull.format(data1) + " e agora são: " + hora.format(data1) + " e "
+				+ min.format(data1) + " minutos");
+		System.out.println("Data formato Simples 2 = " + sdf2.format(data1));
 	}
 }
